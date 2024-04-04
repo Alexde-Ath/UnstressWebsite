@@ -1,4 +1,5 @@
-# Password generator project (210)
+# A useless website
 
-Project to create a website which will need an account to login and view personally generated passwords
+Project to create a website which usees different parts of UI to create needlessly useless way of interacting with a website. I am currently taking a webdev class and looking to intergrate parts into a project
 
+# TBUpdated
