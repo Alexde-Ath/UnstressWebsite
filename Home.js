@@ -14,3 +14,7 @@ function fireflies() {
 }
 
 fireflies();
+
+document.getElementById('clickdoor').addEventListener('click', function(){
+    this.src = 'images/dooropening.gif';
+})
