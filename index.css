@@ -1,0 +1,61 @@
+body {
+    background-color: #000d12;
+}
+
+.wavy-grass {
+    position: absolute;
+    right:40%;
+    bottom:30%;
+    width: 60px;
+    height: auto;
+}
+
+.wavy-grass1 {
+    position: absolute;
+    left:40%;
+    bottom:30%;
+    width: 60px;
+    height: auto;
+}
+
+/* Firefly animation - glowing circles */
+.firefly {
+    position: absolute;
+    background-color: #ff0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 10px #ff0;
+    animation: glow 1s infinite, fade 2s infinite, movePath 10s infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+    50% {
+        box-shadow: 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 50px #ff0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes movePath {
+    0% {
+        transform: rotate(10deg) translate(90px) rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg) translate(10px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(200deg) translate(100px) rotate(-360deg);
+    }
+}
