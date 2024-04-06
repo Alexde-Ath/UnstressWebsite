@@ -12,9 +12,4 @@ function fireflies() {
         firefly.style.animationDuration = `${speed}s`;
     }
 }
-
 fireflies();
-
-document.getElementById('clickdoor').addEventListener('click', function(){
-    this.src = 'images/dooropening.gif';
-})
