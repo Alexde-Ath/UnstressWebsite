@@ -62,7 +62,7 @@ body {
 
 .door:not(.clicked):hover {
     cursor: pointer;
-    content: url('public/doorHover.png');
+    content: url('../public/doorHover.png');
 }
 
 .wavy-grass {
@@ -105,8 +105,20 @@ body {
 }
 
 @keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(238, 232, 172, 0.8), 0 0 20px rgba(238, 232, 172, 0.8), 0 0 70px rgba(238, 232, 172, 0.8), 0 0 50px rgba(238, 232, 172, 0.8);
+    }
+    25% {
+        box-shadow: 0 0 20px rgba(241, 235, 175, 0.8), 0 0 30px rgba(238, 232, 172, 0.8), 0 0 60px rgba(238, 232, 172, 0.8), 0 0 70px rgba(238, 232, 172, 0.8);
+    }
     50% {
-        box-shadow: 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 50px #ff0;
+        box-shadow: 0 0 20px rgba(249, 243, 174, 0.8), 0 0 30px rgba(249, 243, 174, 0.8), 0 0 40px rgba(249, 243, 174, 0.8), 0 0 50px rgba(249, 243, 174, 0.8);
+    }
+    75% {
+        box-shadow: 0 0 10px rgba(238, 232, 172, 0.8), 0 0 10px rgba(238, 232, 172, 0.8), 0 0 30px rgba(238, 232, 172, 0.8), 0 0 30px rgba(238, 232, 172, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(238, 232, 172, 0.8), 0 0 20px rgba(238, 232, 172, 0.8), 0 0 70px rgba(238, 232, 172, 0.8), 0 0 50px rgba(238, 232, 172, 0.8);
     }
 }
 
@@ -115,7 +127,13 @@ body {
         opacity: 0;
     }
     50% {
+        opacity: 0.3;
+    }
+    25% {
         opacity: 0.4;
+    }
+    75% {
+        opacity: 0.2;
     }
     100% {
         opacity: 1;
@@ -126,10 +144,13 @@ body {
     0% {
         transform: rotate(10deg) translate(90px) rotate(10deg);
     }
-    50% {
-        transform: rotate(0deg) translate(10px) rotate(0deg);
+    20% {
+        transform: rotate(30deg) translate(50px) rotate(-20deg);
     }
-    100% {
-        transform: rotate(200deg) translate(100px) rotate(-360deg);
+    40% {
+        transform: rotate(-20deg) translate(70px) rotate(30deg);
+    }
+    80% {
+        transform: rotate(-30deg) translate(60px) rotate(20deg);
     }
 }
