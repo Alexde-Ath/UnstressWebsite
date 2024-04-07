@@ -1,8 +1,20 @@
 window.onload = function() {
+    // When back button pressed for browsers like chrome, looks for when active history state changes
     window.onpopstate = function() {
         window.location.reload();
     };
-    
+    // When back button pressed for browsers like safari. Uses back and forward cache (bfcache), pageshow event is fired when session history entry is being traversed to (including back/forward navigation)
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            var door = document.getElementById('doorClicked');
+            if (door) {
+                door.children[0].src = "public/doorClosed.png";
+            }
+            document.body.classList.remove('fadetoblue');
+            window.location.reload();
+        }
+    });
+
     function fireflies() {
         for (let i = 0; i < 20; i++) {
             let firefly = document.createElement('div');
