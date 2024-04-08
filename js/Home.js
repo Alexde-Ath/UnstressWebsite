@@ -23,7 +23,7 @@ window.onload = function() {
     
             let x = Math.random() * window.innerWidth;
             let y = Math.random() * window.innerHeight;
-            let speed = Math.random() * 10 + 5; 
+            let speed = Math.random() * 10 + 5;
     
             firefly.style.left = `${x}px`;
             firefly.style.top = `${y}px`;
@@ -39,6 +39,10 @@ window.onload = function() {
     var doorCreak = new Audio('public/doorSound.mp3');
     // Open door animation
     document.getElementById('doorClicked').addEventListener('click', function(){
+        doorCreak.play();
+        this.children[0].src = "public/doorOpen.gif";
+    });
+    document.getElementById('CdoorSound').addEventListener('click', function(){
         doorCreak.play();
         this.children[0].src = "public/doorOpen.gif";
     });

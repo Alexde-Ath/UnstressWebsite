@@ -60,7 +60,7 @@ body {
     z-index: 1;
 }
 
-.door:not(.clicked):hover {
+.door:not(.clicked):hover, .door1:not(.clicked):hover {
     cursor: pointer;
     content: url('../public/doorHover.png');
 }
@@ -92,14 +92,38 @@ body {
     z-index: 0;
 }
 
+.doorContact {
+    position: relative;
+    left: 1500%;
+    bottom: -190px;
+    width: 40px;
+    height: auto;
+    z-index: 1;
+}
+
+.CdoorButton {
+    position: absolute;
+    border: none;
+    background: none;
+    padding: 0;
+    left: 45%;
+    bottom: 20%;
+    z-index: 1;
+}
+
+.doorContact:not(.clicked):hover, .door:not(.clicked):hover {
+    cursor: pointer;
+    content: url('../public/doorHover.png');
+}
+
 /* Firefly animation - glowing circles */
 .firefly {
     position: fixed;
-    background-color: #ff0;
+    background-color: rgb(228, 228, 41);
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    box-shadow: 0 0 10px #ff0;
+    box-shadow: 0 0 10px rgb(237, 237, 0);
     animation: glow 1s infinite, fade 2s infinite, movePath 10s infinite;
     animation-iteration-count: infinite;
 }
