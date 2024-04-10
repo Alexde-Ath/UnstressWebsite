@@ -6,6 +6,3 @@ Project to create a website which usees different parts of UI to create needless
 
 
 # Resources used
-
-- React JSX
-- Spline
